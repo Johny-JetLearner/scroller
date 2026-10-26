@@ -1,0 +1,11 @@
+from tkinter import*
+window=Tk()
+d=Label(window,text="listbox & scrollbar")
+d.place(x=44,y=150)
+v=Scrollbar(window)
+v.pack(side="right",fill=Y)
+D=Listbox(window,yscrollcommand=v.set)
+D.pack(side=RIGHT,fill=BOTH)
+D.insert(END,"Sruthi is amazing")
+v.config(command=D.yview)
+window.mainloop()
